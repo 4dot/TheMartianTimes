@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lfB-7e-Apf">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--For You-->
+        <scene sceneID="FhZ-xe-2FR">
+            <objects>
+                <viewController id="cG8-uy-iJW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A2Y-GO-F7E">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="dwk-9l-N6q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="For You" image="star.fill" catalog="system" id="9W9-GM-2nK"/>
+                    <navigationItem key="navigationItem" id="Xkr-zK-poU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e3u-68-Hpq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="277" y="269"/>
+        </scene>
+        <!--Today-->
+        <scene sceneID="7Ww-EL-8Ef">
+            <objects>
+                <viewController storyboardIdentifier="TodayNewsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZJK-uY-CWR" customClass="ArticlesViewController" customModule="TheMartianTimes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RGe-g7-tcU">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="H5g-JE-Dx6">
+                                <rect key="frame" x="0.0" y="44" width="390" height="717"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="B98-bb-RuQ">
+                                    <size key="itemSize" width="414" height="250"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8Gl-rs-nOB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="H5g-JE-Dx6" firstAttribute="bottom" secondItem="8Gl-rs-nOB" secondAttribute="bottom" id="E9J-p7-BM1"/>
+                            <constraint firstItem="H5g-JE-Dx6" firstAttribute="trailing" secondItem="8Gl-rs-nOB" secondAttribute="trailing" id="OLa-Nn-hNk"/>
+                            <constraint firstItem="H5g-JE-Dx6" firstAttribute="top" secondItem="8Gl-rs-nOB" secondAttribute="top" id="Wmg-km-2BB"/>
+                            <constraint firstItem="H5g-JE-Dx6" firstAttribute="leading" secondItem="8Gl-rs-nOB" secondAttribute="leading" id="n6o-dN-vkw"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Today" image="today" id="ld0-Ke-0Ux"/>
+                    <navigationItem key="navigationItem" id="5SQ-Fq-WIF">
+                        <barButtonItem key="backBarButtonItem" id="ePx-eo-QGS"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="H5g-JE-Dx6" id="Xjr-bH-6hT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ge-ld-oNZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-735" y="269"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="58O-6z-8zd">
+            <objects>
+                <navigationController id="lfB-7e-Apf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7aD-iL-l9e">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="76x-Gl-fDM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-826" y="-571"/>
+        </scene>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="sXR-33-SHl">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JUo-te-cNc" customClass="MainTabBarController" customModule="TheMartianTimes" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="xkk-XZ-iT1"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JGZ-5K-o0A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ZJK-uY-CWR" kind="relationship" relationship="viewControllers" id="bIH-Jk-z3H"/>
+                        <segue destination="cG8-uy-iJW" kind="relationship" relationship="viewControllers" id="Vo9-Nd-ED5"/>
+                        <segue destination="mgC-VL-Xyc" kind="relationship" relationship="viewControllers" id="zo6-lQ-bcY"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EaN-TH-hRw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="278" y="-571"/>
+        </scene>
+        <!--Sections-->
+        <scene sceneID="56F-Bu-R0J">
+            <objects>
+                <viewController id="mgC-VL-Xyc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kmB-Ad-zpL">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="NqD-WY-WNb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Sections" image="square.grid.2x2.fill" catalog="system" id="hub-Fl-IBU"/>
+                    <navigationItem key="navigationItem" id="Jgc-Yp-cPc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2bl-5l-jsW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1294" y="269"/>
+        </scene>
+        <!--Article Detail View Controller-->
+        <scene sceneID="seG-QZ-sAE">
+            <objects>
+                <viewController storyboardIdentifier="ArticleDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Eky-bG-n5G" customClass="ArticleDetailViewController" customModule="TheMartianTimes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="77L-T7-WlH">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Vuu-b5-Gvq">
+                                <rect key="frame" x="0.0" y="44" width="390" height="722"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XQ4-CV-AZt">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TJa-4Q-yS4">
+                                <rect key="frame" x="0.0" y="766" width="390" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="hEO-Kh-ko4"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem leftItemsSupplementBackButton="YES" id="bmf-mz-Mux">
+                                        <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="csK-pM-Lag">
+                                            <connections>
+                                                <action selector="backButtonTapped:" destination="Eky-bG-n5G" id="N83-mc-94z"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cko-3R-Lnq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TJa-4Q-yS4" firstAttribute="bottom" secondItem="cko-3R-Lnq" secondAttribute="bottom" id="2ix-t7-oWD"/>
+                            <constraint firstItem="Vuu-b5-Gvq" firstAttribute="leading" secondItem="cko-3R-Lnq" secondAttribute="leading" id="7x2-06-KtL"/>
+                            <constraint firstItem="TJa-4Q-yS4" firstAttribute="trailing" secondItem="cko-3R-Lnq" secondAttribute="trailing" id="DUL-o4-CSS"/>
+                            <constraint firstItem="Vuu-b5-Gvq" firstAttribute="top" secondItem="cko-3R-Lnq" secondAttribute="top" id="DxJ-gy-bNm"/>
+                            <constraint firstItem="TJa-4Q-yS4" firstAttribute="leading" secondItem="cko-3R-Lnq" secondAttribute="leading" id="PAr-qy-uOp"/>
+                            <constraint firstItem="cko-3R-Lnq" firstAttribute="trailing" secondItem="Vuu-b5-Gvq" secondAttribute="trailing" id="cWt-bm-eMG"/>
+                            <constraint firstItem="TJa-4Q-yS4" firstAttribute="top" secondItem="Vuu-b5-Gvq" secondAttribute="bottom" id="hMH-Ow-4FA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Vuu-b5-Gvq" id="591-eK-V97"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zOY-Qq-U9R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1424.6376811594205" y="-571.20535714285711"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="square.grid.2x2.fill" catalog="system" width="128" height="114"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <image name="today" width="36" height="36"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

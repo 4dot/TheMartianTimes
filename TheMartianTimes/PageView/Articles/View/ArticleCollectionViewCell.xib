@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="ArticleCollectionViewCell" reuseIdentifier="ArticleCollectionViewCell" id="hzH-Bs-rXg" customClass="ArticleCollectionViewCell" customModule="TheMartianTimes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="245" height="225"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="s9R-Hf-ivv">
+                <rect key="frame" x="0.0" y="0.0" width="245" height="225"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1bL-sL-gX3">
+                        <rect key="frame" x="8" y="8" width="229" height="101.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqz-c2-VRC">
+                                <rect key="frame" x="0.0" y="0.0" width="229" height="32"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Charter-Bold" family="Charter" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3N-xq-nsB">
+                                <rect key="frame" x="0.0" y="40" width="229" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q99-pN-mZZ">
+                                <rect key="frame" x="0.0" y="68" width="229" height="33.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33.5" id="r7I-Dw-TGC"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mwH-1e-oqd">
+                        <rect key="frame" x="8" y="223.5" width="229" height="1.5"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1.5" id="Ria-Jz-iJL"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="mwH-1e-oqd" secondAttribute="bottom" id="WUr-2o-siM"/>
+                    <constraint firstAttribute="trailing" secondItem="mwH-1e-oqd" secondAttribute="trailing" constant="8" id="b1z-yo-5BE"/>
+                    <constraint firstItem="1bL-sL-gX3" firstAttribute="leading" secondItem="s9R-Hf-ivv" secondAttribute="leading" constant="8" id="cK2-3V-xtV"/>
+                    <constraint firstItem="mwH-1e-oqd" firstAttribute="leading" secondItem="s9R-Hf-ivv" secondAttribute="leading" constant="8" id="ceE-ud-3k7"/>
+                    <constraint firstItem="1bL-sL-gX3" firstAttribute="top" secondItem="s9R-Hf-ivv" secondAttribute="top" constant="8" id="puM-Ai-dxV"/>
+                    <constraint firstAttribute="trailing" secondItem="1bL-sL-gX3" secondAttribute="trailing" constant="8" id="yh6-vL-Qmc"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="245" height="225"/>
+            <connections>
+                <outlet property="bodyLbl" destination="l3N-xq-nsB" id="lZs-il-1Jv"/>
+                <outlet property="imgView" destination="q99-pN-mZZ" id="WLg-Uc-gI2"/>
+                <outlet property="imgViewHeightConstrait" destination="r7I-Dw-TGC" id="MsF-A9-oT7"/>
+                <outlet property="separatorView" destination="mwH-1e-oqd" id="gNi-PG-HGy"/>
+                <outlet property="titleLbl" destination="yqz-c2-VRC" id="aMS-Ou-0aL"/>
+            </connections>
+            <point key="canvasLocation" x="-273.1884057971015" y="-29.799107142857142"/>
+        </collectionViewCell>
+    </objects>
+</document>

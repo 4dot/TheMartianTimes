@@ -22,6 +22,9 @@ Martian Times news is a reader application for the latest emerging market -- Mar
  - Consider this application a showcase of your engineering prowess. You are free to use any architecture and patterns that you prefer. Third party libraries are allowed in all contexts except networking and image handling. System libraries are fine to use everywhere.
  - The length of time spent to complete this exercise will not affect our evaluation. We understand that you are likely to have many things, both personally and professionally, that may slow you down. Your code will, however, be evaluated for architecture, style, clarity, and approach.
 
+## DataFlow Diagram
+
+![ScreenShot](https://raw.github.com/4dot/TheMartianTimes/master/docs/TheMartianTimes_DataFlow.png)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

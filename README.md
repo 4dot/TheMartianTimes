@@ -24,7 +24,7 @@ Martian Times news is a reader application for the latest emerging market -- Mar
 
 ## DataFlow Diagram
 
-![ScreenShot](https://raw.github.com/4dot/TheMartianTimes/master/docs/TheMartianTimes_DataFlow.png)
+![ScreenShot](https://github.com/4dot/TheMartianTimes/blob/main/Docs/TheMartianTimes_DataFlow.png)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
